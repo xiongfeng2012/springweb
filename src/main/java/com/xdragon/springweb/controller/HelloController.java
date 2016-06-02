@@ -13,7 +13,6 @@ public class HelloController {
 
 	@RequestMapping("/greeting")
 	public ModelAndView greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-		System.out.println("Hello " + name);
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("userName", name);
 		return new ModelAndView("/hello", map);
